@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules of Engagement Worksheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Rules of Engagement Worksheet</h1>
+    </header>
+	
+	<nav>
+        <ul class="nav-menu">
+            <li><a href="index.html" onclick="showSection('home')">Home</a></li>
+            <li>
+			<a href="#" onclick="showSection('planning')">Planning/Scoping</a>
+			<ul class="dropdown">
+                    <li><a href="rules.html">Rules Of Engagement</a></li>
+                    
+                </ul>
+            <li>
+                <a href="#" onclick="showSection('passive-recon')">Passive Recon</a>
+                <ul class="dropdown">
+                    <li><a href="whois.html">Whois</a></li>
+                    <li><a href="theharvester.html">theHarvester</a></li>
+                    <li><a href="nslookup.html">Nslookup</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="showSection('active-recon')">Active Recon</a>
+                <ul class="dropdown">
+                    <li><a href="nmap.html">Nmap</a></li>
+                    <li><a href="ping.html">Ping</a></li>
+                    <li><a href="traceroute.html">Traceroute</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="showSection('vulnerability')">Vulnerability Assessment</a></li>
+            <li><a href="#" onclick="showSection('enumeration')">Enumeration</a></li>
+            <li><a href="#" onclick="showSection('exploit')">Exploit</a></li>
+            <li><a href="#" onclick="showSection('post-exploit')">Post-Exploit</a></li>
+            <li><a href="#" onclick="showSection('covering-tracks')">Covering Tracks</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+	  
+        <form id="rulesForm">
+            <fieldset class="card">
+                <legend>Penetration Testing Team Contact Information</legend>
+                <label for="team-primary-contact">Primary Contact:</label>
+                <input type="text" id="team-primary-contact" name="team-primary-contact"><br><br>
+
+                <label for="team-primary-phone">Mobile Phone:</label>
+                <input type="text" id="team-primary-phone" name="team-primary-phone"><br><br>
+
+                <label for="team-primary-pager">Pager:</label>
+                <input type="text" id="team-primary-pager" name="team-primary-pager"><br><br>
+
+                <label for="team-secondary-contact">Secondary Contact:</label>
+                <input type="text" id="team-secondary-contact" name="team-secondary-contact"><br><br>
+
+                <label for="team-secondary-phone">Mobile Phone:</label>
+                <input type="text" id="team-secondary-phone" name="team-secondary-phone"><br><br>
+
+                <label for="team-secondary-pager">Pager:</label>
+                <input type="text" id="team-secondary-pager" name="team-secondary-pager">
+            </fieldset>
+
+            <fieldset class="card">
+                <legend>Target Organization Contact Information</legend>
+                <label for="target-primary-contact">Primary Contact:</label>
+                <input type="text" id="target-primary-contact" name="target-primary-contact"><br><br>
+
+                <label for="target-primary-phone">Mobile Phone:</label>
+                <input type="text" id="target-primary-phone" name="target-primary-phone"><br><br>
+
+                <label for="target-primary-pager">Pager:</label>
+                <input type="text" id="target-primary-pager" name="target-primary-pager"><br><br>
+
+                <label for="target-secondary-contact">Secondary Contact:</label>
+                <input type="text" id="target-secondary-contact" name="target-secondary-contact"><br><br>
+
+                <label for="target-secondary-phone">Mobile Phone:</label>
+                <input type="text" id="target-secondary-phone" name="target-secondary-phone"><br><br>
+
+                <label for="target-secondary-pager">Pager:</label>
+                <input type="text" id="target-secondary-pager" name="target-secondary-pager">
+            </fieldset>
+
+            <fieldset class="card">
+                <legend>Testing Information</legend>
+                <label for="debrief-frequency">"Daily Debriefing" Frequency:</label>
+                <input type="text" id="debrief-frequency" name="debrief-frequency"><br><br>
+
+                <label for="debrief-location">"Daily Debriefing" Time/Location:</label>
+                <input type="text" id="debrief-location" name="debrief-location"><br><br>
+
+                <label for="start-date">Start Date of Penetration Test:</label>
+                <input type="date" id="start-date" name="start-date"><br><br>
+
+                <label for="end-date">End Date of Penetration Test:</label>
+                <input type="date" id="end-date" name="end-date"><br><br>
+
+                <label for="test-times">Testing Occurs at Following Times:</label>
+                <input type="text" id="test-times" name="test-times"><br><br>
+
+                <label for="announced-test">Will test be announced to target personnel?</label>
+                <input type="text" id="announced-test" name="announced-test"><br><br>
+
+                <label for="shun-ip">Will target organization shun IP addresses of attack systems?</label>
+                <input type="text" id="shun-ip" name="shun-ip"><br><br>
+
+                <label for="automatic-shun">Does target organization's network have automatic shunning capabilities?</label>
+                <textarea id="automatic-shun" name="automatic-shun"></textarea><br><br>
+
+                <label for="shun-steps">Steps to mitigate risk from automatic shunning:</label>
+                <textarea id="shun-steps" name="shun-steps"></textarea><br><br>
+
+                <label for="conclude-test">Would the shunning of attack systems conclude the test?</label>
+                <input type="text" id="conclude-test" name="conclude-test"><br><br>
+
+                <label for="continue-test">If not, steps to continue testing if systems get shunned:</label>
+                <textarea id="continue-test" name="continue-test"></textarea><br><br>
+
+                <label for="attack-ips">IP addresses of penetration testing team's attack systems:</label>
+                <textarea id="attack-ips" name="attack-ips"></textarea><br><br>
+
+                <label for="black-box">Is this a "black box" test?</label>
+                <input type="text" id="black-box" name="black-box"><br><br>
+
+                <label for="viewing-policy">Policy regarding viewing data on compromised hosts:</label>
+                <textarea id="viewing-policy" name="viewing-policy"></textarea><br><br>
+
+                <label for="observing-team">Will target personnel observe the testing team?</label>
+                <input type="text" id="observing-team" name="observing-team">
+            </fieldset>
+
+            <fieldset class="card">
+                <legend>Signatures</legend>
+                <label for="target-signature">Signature of Primary Contact representing Target Organization:</label>
+                <input type="text" id="target-signature" name="target-signature"><br><br>
+
+                <label for="target-date">Date:</label>
+                <input type="date" id="target-date" name="target-date"><br><br>
+
+                <label for="pen-test-leader">Signature of Head of Penetration Testing Team:</label>
+                <input type="text" id="pen-test-leader" name="pen-test-leader"><br><br>
+
+                <label for="leader-date">Date:</label>
+                <input type="date" id="leader-date" name="leader-date"><br><br>
+
+                <label for="tester-signatures">Signatures of individual testers (if necessary):</label>
+                <textarea id="tester-signatures" name="tester-signatures"></textarea>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+	<footer id="page-footer">
+    <p>© 2024 Yellow Hat Cybersecurity Tools. All rights reserved.</p>
+	</footer>
+    <script>
+        // Popup message after submission
+        document.getElementById('rulesForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Your information has been submitted successfully.');
+        });
+    </script>
+
+</body>
+</html>

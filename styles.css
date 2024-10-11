@@ -1,117 +1,156 @@
-/* General Reset */
+/* Reset and Base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #1e1e2e;
-    color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
     line-height: 1.6;
+    margin: 0;
+}
+h1{
+	font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-bottom: 20px;
+	
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+    margin-bottom: 20px;
 }
 
-/* Header and Navigation Styles */
+/* Header and Navigation */
 header {
-    background-color: #282a36;
-    padding: 10px 0;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-.nav-menu {
+header h1 {
+    font-weight: 700;
+    margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    background-color: #34495e;
+}
+
+nav ul {
+    list-style-type: none;
     display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    margin: 0 auto;
-    max-width: 1200px;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
     position: relative;
+    padding: 15px 20px;
 }
 
-.nav-menu li {
-    color: #f5f5f5;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    position: relative;
-}
-
-.nav-menu li:hover {
-    background-color: #6272a4;
-    color: #ffffff;
-}
-
-.nav-menu a {
-    color: inherit;
+nav ul li a {
+    color: white;
     text-decoration: none;
-}
-
-.dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #44475a;
-    list-style-type: none;
-    padding: 10px 0;
-    width: 200px;
-    z-index: 10;
-}
-
-.nav-menu li:hover .dropdown {
+    font-weight: 500;
+    padding: 10px;
     display: block;
 }
 
-.dropdown li {
-    padding: 10px 15px;
-    color: #f5f5f5;
-    font-size: 14px;
-    text-transform: none;
-    border-bottom: 1px solid #6272a4;
+nav ul li:hover {
+    background-color: #1abc9c;
 }
 
-.dropdown li:last-child {
-    border-bottom: none;
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background-color: #34495e;
+    border-radius: 0 0 5px 5px;
 }
 
-.dropdown li:hover {
-    background-color: #6272a4;
+nav ul li:hover ul.dropdown {
+    display: block;
 }
 
-/* Main Content Styles */
-.content {
+nav ul li ul.dropdown li {
+    padding: 10px;
+}
+
+nav ul li ul.dropdown li a {
+    padding: 10px 20px;
+    color: #fff;
+}
+
+/* Main Content */
+main.content {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 30px auto;
     padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .section {
     display: none;
+    padding: 20px;
 }
 
 .section.active {
     display: block;
 }
 
-h1 {
-    font-size: 28px;
-    color: #ff79c6;
+/* Content Cards */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    font-weight: 600;
-	margin-left: 10px;
 }
 
-h2 {
-    font-size: 22px;
-    color: #bd93f9;
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.card p {
     margin-bottom: 10px;
-    font-weight: 500;
 }
-
-p {
-    font-size: 18px;
-    color: #f8f8f2;
-    margin-bottom: 
+button[type="submit"] {
+    display: inline-block;
+    background-color: #1abc9c; /* Desired button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease;
+    width: 30%;
+    margin-top: 15px;
+}
+button[type="submit"]:hover {
+    background-color: #16a085; /* Slightly darker shade on hover */
+}
+ button[type="submit"] {
+        font-size: 14px;
+    }
+/* Footer */
+#page-footer {
+    display: bottom;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    width: 100%;
+}

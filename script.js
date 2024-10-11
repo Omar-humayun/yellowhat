@@ -25,7 +25,17 @@ function showSection(sectionId) {
         selectedSection.style.display = 'block';
     }
 }
-
+ function showPopup(event) {
+        // Prevent form submission (which would reload the page)
+        event.preventDefault();
+        
+        // Show the popup
+        alert('Your information has been submitted successfully!');
+        
+        // Optionally, you can reset the form after submission
+        event.target.reset();
+    }
+ 
 // Show the Home section by default on page load
 window.onload = function() {
     showSection('home');
